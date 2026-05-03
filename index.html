@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brain Boost AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <h1>🧠 Brain Boost AI</h1>
+        <p class="tagline">Select your role, answer tailored questions, and get a custom timetable with reminders.</p>
+      </div>
+    </header>
+
+    <section id="roleCard" class="card">
+      <h2>Who are you?</h2>
+      <div class="role-grid">
+        <button class="role-button" data-role="student">Student</button>
+        <button class="role-button" data-role="professional">Working Professional</button>
+        <button class="role-button" data-role="jobseeker">Job Seeker</button>
+        <button class="role-button" data-role="freelancer">Freelancer / Self-Employed</button>
+        <button class="role-button" data-role="homemaker">Homemaker</button>
+        <button class="role-button" data-role="entrepreneur">Entrepreneur / Business Owner</button>
+      </div>
+    </section>
+
+    <section id="quizCard" class="card hidden">
+      <div class="quiz-header">
+        <div>
+          <h2 id="quizTitle">Question 1</h2>
+          <p id="quizSubtitle">Answer the question below.</p>
+        </div>
+        <button class="secondary-btn" id="changeRoleBtn">Change Role</button>
+      </div>
+
+      <div class="question-box">
+        <p id="questionText"></p>
+        <input id="answerInput" type="text" placeholder="Type your answer here" autocomplete="off">
+        <div class="button-row">
+          <button class="secondary-btn" id="prevQuestionBtn">Previous</button>
+          <button class="primary-btn" id="nextQuestionBtn">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="scheduleCard" class="card hidden">
+      <div class="schedule-header">
+        <div>
+          <h2>Your Personalized Schedule</h2>
+          <p id="scheduleDescription">Review and customize the timetable generated for you.</p>
+        </div>
+        <button class="secondary-btn" id="editScheduleBtn">Edit Schedule</button>
+      </div>
+
+      <div id="scheduleList" class="schedule-list"></div>
+      <div id="editPanel" class="edit-panel hidden">
+        <h3>Customize Your Schedule</h3>
+        <div id="editFields"></div>
+        <div class="button-row">
+          <button class="secondary-btn" id="cancelEditBtn">Cancel</button>
+          <button class="primary-btn" id="saveScheduleBtn">Save Changes</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="reminderCard" class="card hidden">
+      <h2>Reminders</h2>
+      <ul id="reminderList" class="reminder-list"></ul>
+      <button class="primary-btn" id="restartBtn">Start Again</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
